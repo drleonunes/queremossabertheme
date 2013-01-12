@@ -1,0 +1,95 @@
+<% @title = "Contato" %>
+
+<%= foi_error_messages_for :contact %>
+
+<h1><%= @title %></h1>
+
+<div id="contact_preamble">
+
+    <% if !flash[:notice] %>
+        <h2>Contate os orgãos públicos para obter informações oficiais</h2>
+        <ul>
+            <li><a href="<%= new_request_path %>">Clique aqui</a> para fazer um pedido de acesso à informação aos orgãos públicos.</li>
+
+            <li>
+            Pedindo informação pessoal sobre si mesmo?
+            Por favor leia nossa página de ajuda sobre
+            <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">dados pessoais</a>.
+            </li>
+        </ul>
+
+    <% end %>
+
+    <h2>Fale com a equipe do Queremos Saber</h2>
+    <% if !flash[:notice] %>
+            <ul>
+            <li>
+            Por favor leia a página de <a href="<%= help_about_path %>">ajuda</a> antes,
+            já que pode ser que sua pergunta já tenha sido respondida.
+            </li>
+            
+            <li>Nós gostariamos que você nos contasse sobre o que achou do site.
+               Preencha o formulário ou envie um email para <a
+               href="mailto:<%=@contact_email%>"><%=@contact_email%></a>
+            </li>
+
+            <li>Nós somos um grupo voluntário e não uma parte do Governo.</li>
+            </ul>
+    <% end %>
+</div>
+
+<% form_for :contact do |f| %>
+
+    <% if not @user %>
+        <p>
+            <label class="form_label" for="contact_name">Seu nome:</label>
+            <%= f.text_field :name, :size => 20 %>
+            (or <%= link_to "sign in", signin_url(:r => request.request_uri) %>)
+        </p>
+
+        <p>
+            <label class="form_label" for="contact_email">Seu email:</label>
+            <%= f.text_field :email, :size => 20 %>
+        </p>
+    <% end %>
+
+    <p>
+        <label class="form_label" for="contact_subject">Assunto:</label> 
+        <%= f.text_field :subject, :size => 50 %>
+    </p>
+
+    <p>
+        <label class="form_label" for="contact_message">Mensagem para o site:</label> 
+        <%= f.text_area :message, :rows => 10, :cols => 60 %>
+    </p>
+
+    <% if !@last_request.nil? %>
+        <p>
+            <label class="form_label" for="contact_message">Incluir um link para o pedido:</label> 
+            <%=request_link(@last_request) %>
+            <%= submit_tag "remove", :name => 'remove' %>
+        </p>
+    <% end %>
+    <% if !@last_body.nil? %>
+        <p>
+            <label class="form_label" for="contact_message">Incluir um link para o orgão:</label> 
+            <%=public_body_link(@last_body) %>
+            <%= submit_tag "remove", :name => 'remove' %>
+        </p>
+    <% end %>
+
+    <p class="form_note">
+    Nós podemos ajudar apenas com <strong>problemas técnicos</strong>, ou questões
+    sobre acesso à informação. Veja o topo dessa página se você gostaria de falar com o Governo.
+    </P>
+
+
+    <div class="form_button">
+        <%= hidden_field_tag(:submitted_contact_form, 1) %>
+        <%= submit_tag "Enviar" %>
+        &lt;-- nós mantemos esse site, não o Governo!
+    </div>
+
+<% end %>
+
+
