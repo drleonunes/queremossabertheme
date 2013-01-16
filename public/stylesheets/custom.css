@@ -152,6 +152,10 @@ background:url(/images/stripes-70-light.png);
 
 #frontpage_splash {
 background:url(/images/flying-computer.png) no-repeat 175px bottom;
+-o-animation: splash_move 1s ease 0 1;
+-moz-animation: splash_move 1s ease 0 1;
+-webkit-animation: splash_move 1s ease 0 1;
+animation: splash_move 1s ease 0 1;
 }
 
 #frontpage_splash h1 {
@@ -275,4 +279,24 @@ background:url(../images/quote-marks.png) no-repeat;
 
 #frontpage_examples .excerpt {
 background:url(../images/quote-marks.png) no-repeat;
+}
+
+@keyframes splash_move {
+0% {background-position:130px bottom;}
+100% {background-position: 175px bottom;}
+}
+
+@-moz-keyframes splash_move {
+0% {background-position:130px bottom;}
+100% {background-position: 175px bottom;}
+}
+
+@-webkit-keyframes splash_move {
+0% {background-position:130px bottom;}
+100% {background-position: 175px bottom;}
+}
+
+@-o-keyframes splash_move {
+0% {background-position:130px bottom;}
+100% {background-position: 175px bottom;}
 }
