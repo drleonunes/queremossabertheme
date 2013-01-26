@@ -15,7 +15,7 @@ Se der uma olhada nas perguntas e respostas, você vai entender como fazer pedid
 
     <h1 id="making_requests"><%= @title %> <a href="#making_requests">#</a> </h1>
 
-    <h2 id="1">1. Eu tenho o direito de pedir informação?</h2>
+    <h2 id="1">Eu tenho o direito de pedir informação?</h2>
     <p>Todo cidadão brasileiros têm o direito, garantido pela Constituição e pela Lei de Acesso à Informação, de pedir documentos, dados e informações aos órgãos públicos e de receber respostas. De acordo com a lei, o pedido pode ser feito por qualquer via legítima (pessoalmente, por telefone, em documento impresso ou por e-mail). É preferível fazer um requerimento por escrito para ter registro do seu pedido e da resposta do poder público, facilitando um recurso caso o pedido seja negado.</p>
     <p>Os pedidos só precisam conter:
     <ul>
@@ -30,7 +30,7 @@ Se der uma olhada nas perguntas e respostas, você vai entender como fazer pedid
 
     <p>Fazer o pedido no Queremos Saber é simples, basta seguir as instruções. Qualquer dúvida, entre em contato conosco.</p>
 
-    <h2 id="2">2. Que tipo de informação posso pedir?</h2>
+    <h2 id="2">Que tipo de informação posso pedir?</h2>
     <p>Segundo a Lei de Acesso à Informação Pública, o direito de acesso é a regra. As exceções previstas são as informações sigilosas e as informações pessoais.</p>
 
     <p>
@@ -41,7 +41,7 @@ ultrassecreta: 25 anos;</li>
     <li>reservada: 5 anos. </li>
     <li>pessoais - informações relativas à itimidade, vida privada, honra e imagem de pessoas ficam restritas pelo prazo máximo de 100 anos. Antes disso, só são fornecidas nos casos contidos no art. 31 da lei.</li></p>
 
-    <h2 id="3">3. A quem eu posso pedir informações?</h2>
+    <h2 id="3">A quem eu posso pedir informações?</h2>
     <p>Você tem direito de solicitar dados a qualquer órgão ou instituição pública, ou que receba recursos públicos. E eles, a obrigação de responder.
 A Lei de Acesso à Informação vale para todos os entes públicos da Administração direta e indireta dos Poderes Executivo, Legislativo, Judiciário e Ministério Público, sejam eles da União, Estados, Distrito Federal e Municípios, e até certas instituições privadas.</p>
     <p>Dependendo do que você quer saber, pode solicitar informações:
@@ -54,14 +54,14 @@ A Lei de Acesso à Informação vale para todos os entes públicos da Administra
     </p>
     <p><%= link_to 'Click here to see the full list', list_public_bodies_default_path %>.</p>
 
-    <h2 id="4">4. Para que serve pedir esse tipo de informação?</h2>
+    <h2 id="4">Para que serve pedir esse tipo de informação?</h2>
     <p>Muitos dados obtidos ou produzidos pelo Estado são de interesse coletivo -  servem para fazer jornalismo, pesquisa científica, orientar investimentos e, principalmente, para exercer cidadania.</p>
     <p>Para os brasileiros terem maior controle sobre o governo e conseguirem participar das decisões do poder público, precisamos conhecer suas atividades.
 Informação é poder. E informação pública é um direito do cidadão. O Queremos Saber vem ajudar o cidadão a fazer valer seu poder.</p>
 
     <h1 id="finding_bodies">Encontrando órgãos públicos</h1>
 
-    <h2 id="5">5. E se eu não souber a que órgão público pedir a informação que me interessa?</h2>
+    <h2 id="5">E se eu não souber a que órgão público pedir a informação que me interessa?</h2>
     <p>No Queremos Saber temos, por enquanto, uma lista dos órgãos públicos do Governo Federal. Queremos colocar as prefeituras e governos de estado. As Câmaras de Vereadores, as Assembleias Legislativas, a Câmara dos Deputados e o Senado. Os Tribunais de Contas. O Ministério Público. Se você puder nos ajudar a fazer este trabalho, seja bem vindo.</p>
     <p>Se você tem uma pergunta e não sabe a quem encaminhar, pode tentar fazer o seguinte:</p>
     <ul>
@@ -72,9 +72,18 @@ Informação é poder. E informação pública é um direito do cidadão. O Quer
         <li>Se tiver dúvidas, entre em <a href="<%= help_contact_url %>">contato</a>.</li>
     </ul>
 
+    <h2 id="missing_body">O órgão público a quem quero mandar um pedido não está cadastrado no site</h2>
+
+    <p>Por favor, <%= link_to 'entre em contato', help_contact_path %> com o nome do órgão público e, se você
+    conseguir encontrar, o endereço de email que eles disponibilizam para pedidos de Acesso à Informação.
+    </p>
+    <p>Se você quiser ajudar a adicionar uma nova categoria de órgãos públicos ao site, nós adoraríamos
+    conversar contigo.
+    </p>
+
     <h1 id="tips">Dicas para fazer um pedido eficaz</h1>
     
-    <h2 id="focused">7. Como fazer um bom pedido?</h2>
+    <h2 id="focused">Como fazer um bom pedido?</h2>
     <p>Coloque em seu pedido somente o necessário para que alguém identifique rapidamente os documentos ou base de dados que contêm a informação que você precisa.</p>
 
     <p>Mensagens curtas, sucintas, facilitam o trabalho dos órgãos públicos para identificar a informação que você está pedindo. Isso aumenta a possibilidade de receber uma resposta mais rapidamente.</p>
@@ -82,18 +91,18 @@ Informação é poder. E informação pública é um direito do cidadão. O Quer
 
     <p>Atenção: Não coloque em seu pedido nada parecido com argumentos sobre um caso particular, afirmações ofensivas ou insultos. Se você fizer isso, nós vamos remover sua solicitação. Se alguma solicitação for removida, vamos conversar caso a caso como refazê-la.</p>
     
-    <h2 id="data_protection">8. Posso solicitar informações sobre eu mesmo?</h2>
+    <h2 id="data_protection">Posso solicitar informações sobre eu mesmo?</h2>
     <p>Não use o Queremos Saber para pedir informações pessoais. Você tem direito a informações sobre você mesmo, mas aqui não é o caminho pra isso. Todas as respostas dos órgãos públicos aos pedidos feitos aqui serão publicadas. E você pode não querer que informações privadas estejam visíveis pra todo mundo.</p>
 
-    <h2>09. Posso enviar o mesmo pedido para vários órgãos?</h2>
+    <h2>Posso enviar o mesmo pedido para vários órgãos?</h2>
     <p>Você pode solicitar a mesma informação a mais de um órgão público. Mas é melhor começar pelo órgão que tiver maior probabilidade de ter a informação que você precisa. Se ele não tiver os dados, pode indicar outro que tenha. Para fazer o pedido a mais de um órgão, você precisa copiar e colar o texto, manualmente, em cada uma das solicitações.</p>
 
     <h1 id="answers_appeals">Respostas e recursos</h1>
 
-    <h2>10. Preciso pagar para fazer um pedido ou para receber a informação?</h2>
+    <h2>Preciso pagar para fazer um pedido ou para receber a informação?</h2>
     <p>Não. Fazer um pedido de acesso à informação é gratuito. Receber as informações pela internet também. Os órgãos de governo só podem cobrar o custo dos serviços e materiais usados para reproduzir documentos (exceção no parágrafo único do art. 12 da Lei de Acesso).</p>
 
-    <h2 id="quickly_response">11. Quanto tempo demora para eu receber uma resposta?</h2>
+    <h2 id="quickly_response">Quanto tempo demora para eu receber uma resposta?</h2>
     <p>Quando a informação já está disponível, a autorização para seu acesso deve ser imediata (art. 11). Caso não seja possível conceder o acesso imediado, o poder público têm 20 dias para responder (prazo prorrogável por mais 10 dias, justificando o atraso):</p>
 
     <p>
@@ -106,13 +115,13 @@ Informação é poder. E informação pública é um direito do cidadão. O Quer
 
     <p>Você pode usar o Queremos Saber para acompanhar o que está acontecendo com seu pedido.</p>
 
-    <h2>12. O que acontece se eu não receber nenhuma resposta??</h2>
+    <h2>O que acontece se eu não receber nenhuma resposta??</h2>
     <p>Se você não receber uma resposta no prazo legal, o Queremos Saber vai lhe avisar por e-mail. Os órgãos públicos brasileiros têm, no máximo, 30 dias para dar uma resposta aos pedidos. Depois disso, o Queremos Saber vai enviar um e-mail ao órgão responsável para lembrá-lo de que o prazo está vencendo. Se não houver resposta, o agente público responsável pode até ser responsabilizado de acordo com o art. 32. Você precisa enviar o pedido ao órgão imediatamente superior ao que recebeu sua primeira solicitação.órgão</p>
 
     <p>Não receber resposta é uma omissão, é como se sua informação fosse negada. Assim, você pode apresentar um recurso à autoridade ou órgão hierarquicamente superior ao que você fez o pedido. </p>
     <p>Isso se faz contando que pedido você fez e para quem, relatando que não teve resposta e pedindo uma providência.</p>
 
-    <h2>13. E se eu receber uma resposta, mas não ficar feliz com ela?</h2>
+    <h2>E se eu receber uma resposta, mas não ficar feliz com ela?</h2>
     <p>Você pode se decepcionar de muitas maneiras com as respostas que vai receber:</p>
     <ul>
     <li>Você pode receber somente uma parte das informações que solicitou (em vez de uma recusa formal) ou a informação que você receber pode não corresponder exatamente ao que você perguntou – é o que chamamos de uma "resposta incompleta";</li>
@@ -123,10 +132,10 @@ Informação é poder. E informação pública é um direito do cidadão. O Quer
     </ul>
     <p>Se você receber uma resposta incompleta ou errada, pode apresentar um recurso à autoridade ou órgão hierarquicamente superior ao que você fez o pedido (relatando qual  foi a resposta e porque você ficou insatisfeito, pedindo uma providência).</p>
 
-    <h2>14. Que argumentos os órgãos públicos podem usar para recusar a resposta a meu pedido?</h2>
+    <h2>Que argumentos os órgãos públicos podem usar para recusar a resposta a meu pedido?</h2>
     <p>A Lei de Acesso a Informação estabelece uma série de razões para que um pedido não seja atendido. Essas razões são conhecidas como exceções, porque na lei de acesso brasileira a regra é a publicidade das informações e o sigilo é a exceção. A lista de tipos de informações que podem ser classificadas como sigilosas está no art. 23 da Lei de Acesso.</p> 
 
-    <h2>15. Recursos</h2>
+    <h2>Recursos</h2>
     <p>Se você não ficar satisfeito com a resposta a seu pedido, pode fazer um recurso ao órgão imediatamente superior. Vale a pena fazer isso porque o recurso pode gerar uma resposta mais completa do que a enviada ao seu pedido original. Em certos casos, o agente público pode ser responsabilizado pelo não cumprimento de suas obrigações (art. 32).</p>
     <p>O recurso deve ser dirigido à autoridade hierarquicamente superior à que decidiu negar o fornecimento da informação, ou que devia ter respondido e não o fez. Essa autoridade deve se manifestar no prazo de 5 dias.</p>
     <p>Cada órgão deve fazer sua própria regulamentação para a revisão das decisões que negarem acesso a informações. Nessa regulamentação, devem assegurar o direito do solicitante de saber o andamento de seu pedido.</p>
@@ -138,19 +147,19 @@ Informação é poder. E informação pública é um direito do cidadão. O Quer
 
     <p>Aliás, o Ministério Público é a entidade que defende os interesses coletivos. Os promotores e procuradores são como "advogados da sociedade". Se você encontrar muitas dificuldades em obter informações públicas, pode levar o caso a um promotor público!</p>
 
-    <h2>16. Posso reutilizar a informação que receber?</h2>
+    <h2>Posso reutilizar a informação que receber?</h2>
     <p>Pode sim, afinal, informações públicas são para uso do povo.</p>
 
     <h1 id="request_moderation">Moderação de pedidos pelo Queremos Saber</h1>
 
-    <h2>17. Como o site vai moderar os pedidos de informação?</h2>
+    <h2>Como o site vai moderar os pedidos de informação?</h2>
     <p>Nós vamos estimular qualquer cidadão interessado em fazer pedidos e vamos deixar aberta, no site, a possibilidade de qualquer outra pessoa comentar esses pedidos. Um grupo de voluntários vai checar o conteúdo do site regularmente. Nós nos reservamos o direito de remover insultos e difamações do site.</p>
 
-    <h2>18. Vocês podem manter meu pedido de acesso em segredo até eu decidir publicar as informações que receber?</h2>
+    <h2>Vocês podem manter meu pedido de acesso em segredo até eu decidir publicar as informações que receber?</h2>
     <p>O Queremos Saber foi criado para a realização de pedidos públicos de acesso a informações públicas. Todas as respostas que recebermos serão automaticamente publicadas, para que qualquer pessoa tenha acesso a elas.
 Se você for um jornalista, participar de uma organização não-governamental ou alguém que deseja manter as respostas aos seus pedidos sob sigilo, por qualquer razão, pode fazer sua solicitação diretamente ao órgão público responsável.</p>
 
-    <h2>20. Se eu solicitar informações diretamente e receber alguma resposta, posso publicar aqui?</h2>
+    <h2>Se eu solicitar informações diretamente e receber alguma resposta, posso publicar aqui?</h2>
     <p>Não. O Queremos Saber foi criado para manter os pedidos feito pelo site. Nós não queremos nos tornar um arquivo de todos os pedidos de acesso à informação realizados no Brasil. Também não podemos colocar no ar as respostas a pedidos feitos diretamente, porque para isso precisaríamos checar se as informações vieram realmente de um órgão público e de qual deles.</p> 
     <p>Se você quiser que suas respostas se tornem públicas aqui, é melhor fazer a solicitação por meio do site.</p>
 </div>
